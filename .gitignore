@@ -1,0 +1,9 @@
+# django
+note_react_server/.idea
+note_react_server/**/__pycache__
+note_react_server/db.sqlite3
+note_react_server/note/
+note_react_server/static
+
+# react
+note-react2.0/node_modules

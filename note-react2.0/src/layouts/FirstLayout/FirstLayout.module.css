@@ -1,0 +1,19 @@
+.body, .center, .edit{
+    display: flex;
+    /* flex-direction: ro; */
+}
+
+.body{
+    flex-direction: column;
+}
+.center{
+    /* flex-direction: row; */
+    width: 100%
+}
+
+
+.edit{
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+}
