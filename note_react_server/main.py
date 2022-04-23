@@ -4,9 +4,8 @@ from manage import main
 import webbrowser
 import subprocess
 
-from note_react_server.settings import STATICFILES_DIRS
+from note_react_server.settings import STATIC_PATH
 
-STATIC_PATH = STATICFILES_DIRS[0]
 GIT_REMOTE_URL = 'https://github.com/russionbear/russionbear.github.io.git'
 
 

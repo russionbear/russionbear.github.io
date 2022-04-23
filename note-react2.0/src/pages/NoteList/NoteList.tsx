@@ -268,8 +268,9 @@ export default function NoteList() {
   }, [])
 
   useEffect(() => {
+    let nowBook_ = Store.getState().books.nowBook
     // @ts-ignore
-    let newBook = allBooks.find((item) => item.key === nowBook)
+    let newBook = allBooks.find((item) => item.key === nowBook_)
     if (newBook === undefined) {
       if (allBooks.length === 0) {
         // console.log('76hf')
@@ -281,12 +282,15 @@ export default function NoteList() {
         Store.dispatch(setBooksSwapNow(allBooks[0].key))
       }
     }
-  }, [allBooks, nowBook])
+  }, [allBooks])
 
   useEffect(() => {
     // console.log('nowBook', nowBook)
     if (nowBook === '' || nowBook === undefined) {
-      setAllNotes([])
+      // setAllNotes([])
+      setRenderNowBook([])
+      // @ts-ignore
+      Store.dispatch(setNotesUpdate([]))
       return
     }
     handleGetNotes(nowBook)
@@ -298,9 +302,13 @@ export default function NoteList() {
     let newNote = allNotes.find(item => item.key === nowNote)
     if (newNote === undefined) {
       if (allNotes.length === 0) {
-        setNowNote('')
+        // setNowNote('')
+        // @ts-ignore
+        Store.dispatch(setNotesSwapNow(''))
       } else {
-        setNowNote(allNotes[0].key)
+        // setNowNote(allNotes[0].key)
+        // @ts-ignore
+        Store.dispatch(setNotesSwapNow(allNotes[0].key))
       }
     }
 
@@ -335,9 +343,10 @@ export default function NoteList() {
   }, [allNotes])
 
   useEffect(() => {
-    handleGetNoteValue(nowBook, nowNote)
+    handleGetNoteValue(Store.getState().books.nowBook, nowNote)
     setRenderNowNote(nowNote)
-  }, [nowNote, nowBook])
+    console.log(Store.getState().books.nowBook, 'f7hg')
+  }, [nowNote])
 
   // server : fetch
   //-- books
@@ -376,6 +385,8 @@ export default function NoteList() {
       }
       let newBooks = response.data['books']
       // @ts-ignore
+      newBooks = newBooks.filter(item=>item.key!=='')
+      // @ts-ignore
       Store.dispatch(setBooksUpdate(newBooks))
       // console.log(newBooks, 'newbooks')
 
@@ -397,6 +408,8 @@ export default function NoteList() {
         return
       }
       let newNotes = response.data['notes']
+      // @ts-ignore
+      newNotes = newNotes.filter(item=>item.key!=='')
       // console.log('new notes:', newNotes)
       // @ts-ignore
       Store.dispatch(setNotesUpdate(newNotes))
@@ -406,11 +419,14 @@ export default function NoteList() {
   }, [])
   //-- note value
   const handleGetNoteValue = useCallback((bookKey, noteKey) => {
-    if (bookKey === '' || noteKey === '') {
+    if (bookKey === '' || noteKey === '' || bookKey === undefined || noteKey === undefined) {
+      Store.dispatch(setEditValue(''))
+      // @ts-ignore
+      Store.dispatch(setEditSourceUpdate([]))
       return
     }
 
-    myAxios.post('/value', { type: 'get', bookKey, noteKey, source: nowNote }).then(response => {
+    myAxios.post('/value', { type: 'get', bookKey, noteKey }).then(response => {
       if (response.data['status'] !== 0) {
         console.log('error handleGetNoteValue')
         return
@@ -464,7 +480,7 @@ export default function NoteList() {
     // console.log(searchKW)
     let searchKW_ = searchKW.replace(/\\/g, '')
     let newNotes = allNotes.filter(item => {
-      if(searchKW_!==''&&item.title.search(searchKW_)===-1){
+      if (searchKW_ !== '' && item.title.search(searchKW_) === -1) {
         return false
       }
       if (tags.length === 0) {
@@ -569,42 +585,46 @@ export default function NoteList() {
     // setNowNote(e)
     if (e === nowNote) {
       return
-    }
-    if (nowBook !== '' && nowNote !== '') {
-      let newNotes = [...allNotes]
-      // @ts-ignore
-      let nowNote_ = newNotes.find(item => item.key === nowNote)
-      if (nowNote_ === undefined) {
-        console.log('dangerous error !!!')
-        return
-      }
-      let shouldModify = Store.getState().editValue.modified
-      if (shouldModify) {
-        nowNote_['modifyTime'] = FormatDate('"yyyy-MM-dd HH:mm:ss"')
-      }
-
-      myAxios.post('/value',
-        {
-          type: 'set',
-          bookKey: nowBook,
-          noteKey: nowNote,
-          value: Store.getState().editValue.value,
-          source: shouldModify ? nowNote_ : undefined
-        }
-      ).then((response) => {
-        if (response.data['status'] !== 0) {
-          console.log('save error', response)
-        }
-        if (shouldModify) {
-          // @ts-ignore
-          Store.dispatch(setNotesUpdate(newNotes))
-        }
-      })
-    }
-    if(Store.getState().notes.nowNote!==e){
+    } else {
       // @ts-ignore
       Store.dispatch(setEditValueModified(false))
     }
+
+    //  这个步骤是不可能的
+    if (nowBook === '' || nowNote === '' || nowBook === undefined || nowNote === undefined) {
+      Store.dispatch(setEditValue(''))
+      // @ts-ignore
+      Store.dispatch(setEditSourceUpdate([]))
+    }
+    let newNotes = [...allNotes]
+    // @ts-ignore
+    let nowNote_ = newNotes.find(item => item.key === nowNote)
+    if (nowNote_ === undefined) {
+      console.log('dangerous error !!!')
+      return
+    }
+    let shouldModify = Store.getState().editValue.modified
+    if (shouldModify) {
+      nowNote_['modifyTime'] = FormatDate('"yyyy-MM-dd HH:mm:ss"')
+    }
+
+    myAxios.post('/value',
+      {
+        type: 'set',
+        bookKey: nowBook,
+        noteKey: nowNote,
+        value: Store.getState().editValue.value,
+        source: shouldModify ? nowNote_ : undefined
+      }
+    ).then((response) => {
+      if (response.data['status'] !== 0) {
+        console.log('save error', response)
+      }
+      if (shouldModify) {
+        // @ts-ignore
+        Store.dispatch(setNotesUpdate(newNotes))
+      }
+    }).catch(response => console.log(response))
     // @ts-ignore
     Store.dispatch(setNotesSwapNow(e))
   }

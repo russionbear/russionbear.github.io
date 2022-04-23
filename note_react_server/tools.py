@@ -1,8 +1,9 @@
 import os
 import sys
 import re
-from note_react_server.settings import STATICFILES_DIRS
-STATIC_ROOT =  STATICFILES_DIRS[0]
+from note_react_server.settings import STATIC_PATH
+from pathlib import Path
+
 
 if len(sys.argv):
     if sys.argv[0] == __file__.split("/")[-1]:

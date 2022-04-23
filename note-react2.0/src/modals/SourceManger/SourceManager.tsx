@@ -267,7 +267,7 @@ export default function SourceManager(
   const handleView = () => { }
 
   const handleDelete = () => {
-    console.log(selectedRowKeys)
+    // console.log(selectedRowKeys)
     let bookKey = Store.getState().books.nowBook
     let noteKey = Store.getState().notes.nowNote
     if(bookKey===''||noteKey===''){
@@ -287,7 +287,8 @@ export default function SourceManager(
         console.log(response.data)
         return
       }
-      setDataSource(newDataSources)
+      // @ts-ignore
+      Store.dispatch(setEditSourceUpdate(newDataSources))
     })
   };
 
@@ -378,7 +379,9 @@ export default function SourceManager(
       const item = newData[index];
       // @ts-ignore
       newData.splice(index, 1, { ...item, ...row });
-      setDataSource(newData)
+      // setDataSource(newData)
+      // @ts-ignore
+      Store.dispatch(setEditSourceUpdate(newData))
     })
   };
 
@@ -406,7 +409,8 @@ export default function SourceManager(
     fileList: dropFileList,
     // @ts-ignore
     customRequest: e => {
-      console.log(e)
+      // console.log(e)
+      // return
       let file1 = e.file
       let formdata = new FormData()
       // console.log(formdata)
@@ -420,11 +424,19 @@ export default function SourceManager(
       formdata.append("type", 'add')
       formdata.append("bookKey", nowBook)
       formdata.append("noteKey", nowNote)
+
+      let sourceId = file1.uid;
+      let tmp = file1.name.split('.')
+      if(tmp.length===0){
+        message.info("上传文件资源", 0.8)
+      }else{
+        sourceId = sourceId + '.' + tmp[tmp.length-1]
+      }
       let newSource: ItemSource = {
         title: '引用',
         type: addSourceType,
         size: file1.size,
-        sourceId: file1.uid,
+        sourceId: sourceId,
         url: '',
         gitUrl: ''
       }
@@ -436,11 +448,13 @@ export default function SourceManager(
         data: formdata
       }).then(
         request => {
-          if (request.data['status'] === 0) {
-            newSource['gitUrl'] = request.data['gitURl']
-            // @ts-ignore
-            Store.dispatch(setEditSourceUpdate([newSource, ...dataSource]))
+          if(request.data['status']!==0){
+            console.log('error', request.data)
+            return
           }
+          newSource['gitUrl'] = request.data['gitUrl']
+          // @ts-ignore
+          Store.dispatch(setEditSourceUpdate([newSource, ...dataSource]))
         }
       )
     },

@@ -1,14 +1,12 @@
 from django.http import HttpResponse, JsonResponse, Http404, StreamingHttpResponse
 from django.shortcuts import render
-from .settings import STATICFILES_DIRS, GIT_URL_ROOT
+from .settings import STATIC_PATH, GIT_URL_ROOT
 
 import os
 import shutil
 import json
 import requests
 from contextlib import closing
-
-STATIC_PATH = STATICFILES_DIRS[0] + '/books/'
 
 
 def down_chunk_file_manager(file_path, chuck_size=1024):
@@ -22,7 +20,7 @@ def down_chunk_file_manager(file_path, chuck_size=1024):
 
 
 def init_localstorage():
-    if os.path.exists(STATIC_PATH+'/__setting.json'):
+    if os.path.exists(STATIC_PATH+'__setting.json'):
         return
     if os.path.exists(STATIC_PATH):
         shutil.rmtree(STATIC_PATH)
@@ -49,73 +47,6 @@ def edit(request):
 
 def browser(request):
     return render(request, 'edit.html')
-
-# def books(request):
-#     # bookKey = request.POST.get('bookKey', None)
-#     error = JsonResponse({'status': 100})
-#     type_ = request.POST.get('type', None)
-#     if type_ is None:
-#         return error
-#
-#     if type_ == 'get':
-#         with open(STATIC_PATH + '/__setting.json', 'r', encoding='utf-8') as f:
-#             return JsonResponse({'status': 0, 'books': json.load(f)['books']})
-#     elif type_ == 'update':
-#         with open(STATIC_PATH + '/__setting.json', 'r', encoding='utf-8') as f:
-#             oldBooks = json.load(f)['books']
-#         newBooks = request.POST.get('newBooks', None)
-#         if newBooks is None:
-#             return error
-#
-#         should_add = []
-#         should_rename = {}
-#         operated = set()
-#         for i in newBooks:
-#             status = 0
-#             for j in oldBooks:
-#                 if j.key == i.key:
-#                     status = 1
-#                     operated.add(j)
-#                     if i.name != j.name:
-#                         should_rename[j.name] = i.name
-#                     break
-#             if status == 0:
-#                 should_add.append(i)
-#
-#         for i in oldBooks:
-#             if i not in operated:
-#                 if os.path.exists(STATIC_PATH+'/books/'+i.name):
-#                     shutil.rmtree(STATIC_PATH+'/books/'+i.name)
-#
-#         file_list = os.listdir(STATIC_PATH+'/books')
-#         new_files = list(should_rename.keys())
-#         files_dict = {}
-#
-#         count = 0
-#         for i in file_list:
-#             while str(count) in file_list or str(count) in new_files:
-#                 count += 1
-#             files_dict[i] = str(count)
-#             count += 1
-#         for i in file_list:
-#             os.rename(STATIC_PATH+'/books/'+i, STATIC_PATH+'/books/'+files_dict[i])
-#
-#         for old, new_ in should_rename.items():
-#             os.rename(STATIC_PATH+'/books/'+files_dict[old], STATIC_PATH+'/books/'+new_)
-#
-#         for i in should_add:
-#             os.mkdir(STATIC_PATH+'/books/'+i.name)
-#             with open(STATIC_PATH+'/books/'+i.name+'/__notes.json') as f:
-#                 json.dump({'notes': []}, f)
-#
-#         with open(STATIC_PATH+'/books.json', 'r', encoding='utf-8') as f:
-#             tmp_books = json.load(f)
-#             tmp_books['books'] = newBooks
-#
-#         with open(STATIC_PATH + '/books.json', 'w', encoding='utf-8') as f:
-#             json.dump(tmp_books, f)
-#
-#         return JsonResponse({'status': 0})
 
 
 def books(request):
@@ -255,7 +186,6 @@ def source(request):
     if bookKey is None or noteKey is None or type_ is None:
         return error
     if type_ == 'get':
-        # print("fsdfsdf")
         with open(STATIC_PATH+bookKey+'/'+noteKey+'/__source.json', 'r', encoding='utf-8') as f:
             tmp_sources = json.load(f)['sources']
             for i1, i in enumerate(tmp_sources):
@@ -312,7 +242,7 @@ def source(request):
 
         with open(STATIC_PATH + bookKey + '/' + noteKey + '/__source.json', 'r', encoding='utf-8') as f:
             tmp_sources = json.load(f)
-            source_['gitUrl'] = '/' + '/'.join([bookKey, noteKey, source_['sourceId']])
+            source_['gitUrl'] = GIT_URL_ROOT + '/'.join([bookKey, noteKey, source_['sourceId']])
 
         with open(STATIC_PATH + bookKey + '/' + noteKey + '/__source.json', 'w', encoding='utf-8') as f:
             tmp_sources['sources'].append(source_)
@@ -360,7 +290,7 @@ def source(request):
 
         with open(STATIC_PATH + bookKey + '/' + noteKey + '/__source.json', 'r', encoding='utf-8') as f:
             tmp_sources = json.load(f)
-            source_['gitUrl'] = '/' + '/'.join([bookKey, noteKey, source_['sourceId']])
+            source_['gitUrl'] = GIT_URL_ROOT + '/'.join([bookKey, noteKey, source_['sourceId']])
 
         with open(STATIC_PATH + bookKey + '/' + noteKey + '/__source.json', 'w', encoding='utf-8') as f:
             tmp_sources['sources'].append(source_)
