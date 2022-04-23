@@ -1,5 +1,5 @@
 
-import { 
+import {
   PartitionOutlined,
   BgColorsOutlined
 } from '@ant-design/icons';
@@ -36,6 +36,9 @@ export const TYPE_BOOKS_NOW_SWAP = "TYPE_BOOKS_NOW_SWAP"
 export const TYPE_NOTES_UPDATE = "TYPE_NOTES_UPDATE"
 export const TYPE_NOTES_NOW_SWAP = "TYPE_NOTES_NOW_SWAP"
 
+export const TYPE_GH_STATE = "TYPE_GH_STATE"
+export const TYPE_GH_GETDATA = "TYPE_GH_GETDATA"
+
 /**
  * 初始值
  */
@@ -71,11 +74,11 @@ export const INIT_MARKDOW = {
 
   fullscreen: false,
   showSidebar: true,
-  
+
   //
   markdownHeight: (window.innerHeight - _markdown_top),
   editWidth: (window.innerWidth - _markdown_left - _markdown_left_side) / 2 + 'px',
-  viewWidth: (window.innerWidth - _markdown_left - _markdown_left_side) / 2  + 'px',
+  viewWidth: (window.innerWidth - _markdown_left - _markdown_left_side) / 2 + 'px',
   canvasWidth: window.innerWidth - _markdown_left_side,
   editShow: true,
   viewShow: true
@@ -86,7 +89,7 @@ export const INIT_EDIT: {
   value: string,
   getValueFunc: (str: string) => void,
   source: Array<ItemSource>,
-  showSource:boolean,
+  showSource: boolean,
   quoteValue: string,
   modified: boolean
 } = {
@@ -121,6 +124,46 @@ export const INIT_NOTES:
   nowNote: ''
 }
 
+
+// mid
+export interface GithubBook extends ItemBook {
+  children: { [key: string]: GithubNote }
+}
+
+
+// mid
+export interface GithubNote extends ItemBook {
+  children: { [key: string]: ItemSource }
+}
+
+
+export const INIT_GITHUB: {
+  type: string,
+  data: { [key: string]: GithubBook }
+} = {
+  type: '',
+  data: {
+    '1111': {
+      key: '1111',
+      name: '1111',
+      dsc: '1111',
+      children: {}
+    }, 
+    '222': {
+      key: '222',
+      name: '222',
+      dsc: '222',
+      children: {}
+    }, 
+    '333': {
+      key: '333',
+      name: '333',
+      dsc: '333',
+      children: {}
+    }, 
+  }
+}
+
 /**
  * 接口，规范action
  */
@@ -135,7 +178,7 @@ export interface MarkdownSize {
 // mid
 export interface ItemSource {
   sourceId: string,
-  type: 'music'|'video'|'image'|'outer url'|'local url',
+  type: 'music' | 'video' | 'image' | 'outer url' | 'local url',
   size: number,
   title: string,
   url: string,
@@ -149,7 +192,7 @@ export interface EditValue {
   source: Array<ItemSource>,
   showSource: boolean,
   quoteValue: string,
-  modified:boolean
+  modified: boolean
 }
 
 export interface SideBar {
@@ -218,11 +261,11 @@ export function setMrakdownSize(w: number, h: number) {
 }
 
 export function setMarkdownShowType(type: {
-  fullscreen?:boolean,
-  showSidebar?:boolean,
+  fullscreen?: boolean,
+  showSidebar?: boolean,
   editShow?: boolean,
-  viewShow?:boolean
-}){
+  viewShow?: boolean
+}) {
   return {
     type: TYPE_MARKDOWN_SHOW_TYPE,
     ...type
@@ -251,14 +294,14 @@ export function setEditValueGetFunc(getValueFunc: (arg: string) => void) {
   }
 }
 
-export function setEditSourceShow(showSource: boolean){
+export function setEditSourceShow(showSource: boolean) {
   return {
     type: TYPE_EDIT_SOURCE_SHOW,
     showSource
   }
 }
 
-export function setEditValueModified(modified: boolean){
+export function setEditValueModified(modified: boolean) {
   return {
     type: TYPE_EDIT_MODIFIED,
     modified
@@ -273,7 +316,7 @@ export function setSidbarNow(value: string) {
   }
 }
 
-export function setSidbarDouble(doubleClick: boolean){
+export function setSidbarDouble(doubleClick: boolean) {
   return {
     type: TYPE_SIDEBAR_DOUBLE,
     doubleClick

@@ -20,7 +20,9 @@ import {
     TYPE_NOTES_UPDATE,
     TYPE_EDIT_SOURCE_UPDATE,
     TYPE_MARKDOWN_SHOW_TYPE,
-    TYPE_EDIT_MODIFIED
+    TYPE_EDIT_MODIFIED,
+    INIT_GITHUB,
+    TYPE_GH_GETDATA
 
 } from './actions'
 
@@ -156,13 +158,24 @@ function notes(
     }
 }
 
+function github(state = INIT_GITHUB, action: {[key: string]: any}){
+    switch (action.type) {
+        case TYPE_GH_GETDATA:
+            return {...state, ...action}
+    
+        default:
+            break;
+    }
+}
+
 
 const mainReducer = combineReducers({
     markdownSize,
     editValue,
     sidebar,
     books,
-    notes
+    notes,
+    github,
 })
 
 export default mainReducer

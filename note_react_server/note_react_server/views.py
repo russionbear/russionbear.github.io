@@ -7,6 +7,12 @@ import shutil
 import json
 import requests
 from contextlib import closing
+from django.core.management.commands.runserver import Command as Runserver
+
+
+LOCAL_ADDRESS = 'http://' + Runserver.default_addr + ':' + Runserver.default_port + '/static'
+
+print('runserver', Runserver.default_addr, Runserver.default_port)
 
 
 def down_chunk_file_manager(file_path, chuck_size=1024):
@@ -189,7 +195,7 @@ def source(request):
         with open(STATIC_PATH+bookKey+'/'+noteKey+'/__source.json', 'r', encoding='utf-8') as f:
             tmp_sources = json.load(f)['sources']
             for i1, i in enumerate(tmp_sources):
-                tmp_sources[i1]['gitUrl'] = GIT_URL_ROOT+bookKey+'/'+noteKey+'/'+i['sourceId']
+                tmp_sources[i1]['gitUrl'] = LOCAL_ADDRESS+'/'+bookKey+'/'+noteKey+'/'+i['sourceId']
             return JsonResponse({'status': 0, 'sources': tmp_sources})
     elif type_ == 'delete':
         tmp_val = request.POST.get('deleteIds', None)
@@ -247,8 +253,8 @@ def source(request):
         with open(STATIC_PATH + bookKey + '/' + noteKey + '/__source.json', 'w', encoding='utf-8') as f:
             tmp_sources['sources'].append(source_)
             json.dump(tmp_sources, f)
-        print('gitUrl', source_['gitUrl'])
-        return JsonResponse({'status': 0, 'gitUrl': source_['gitUrl']})
+        # print('gitUrl', source_['gitUrl'], '/'.join([LOCAL_ADDRESS, noteKey, source_['sourceId']]))
+        return JsonResponse({'status': 0, 'gitUrl': '/'.join([LOCAL_ADDRESS, bookKey, noteKey, source_['sourceId']])})
 
     elif type_ == 'download':
         source_ = request.POST.get('source', None)
@@ -296,7 +302,8 @@ def source(request):
             tmp_sources['sources'].append(source_)
             json.dump(tmp_sources, f)
 
-        return JsonResponse({'status': 0, 'size': os.stat(file_path).st_size, 'gitUrl': source_['gitUrl']})
+        return JsonResponse({'status': 0, 'size': os.stat(file_path).st_size,
+                             'gitUrl': '/'.join([LOCAL_ADDRESS, bookKey, noteKey, source_['sourceId']])})
     elif type_ == 'update':
         sourceId = request.POST.get('sourceId', None)
         newSource = request.POST.get('newSource', None)
