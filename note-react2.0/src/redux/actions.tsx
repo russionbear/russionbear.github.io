@@ -6,7 +6,7 @@ import {
 // import Markdown from '../pages/Markdown/Markdown';
 
 
-const _markdown_top = 100
+const _markdown_top = 0 // 32
 const _markdown_left_side = 45 // sidebar
 const _markdown_left = 400 // notelist
 const _markdown_toobar_heigth = 32

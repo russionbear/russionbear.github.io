@@ -20,7 +20,6 @@ import {
     TYPE_NOTES_UPDATE,
     TYPE_EDIT_SOURCE_UPDATE,
     TYPE_MARKDOWN_SHOW_TYPE,
-    TYPE_SIDEBAR_DOUBLE,
     TYPE_EDIT_MODIFIED
 
 } from './actions'
@@ -32,6 +31,15 @@ import { combineReducers } from 'redux'
 function markdownSize(
     state = INIT_MARKDOW,
     action: MarkdownSize) {
+        
+    function handleRlt(enter: typeof state ): typeof state {
+        return {...enter,
+            markdownHeight: (enter.h - (enter.fullscreen?0:enter.top)) ,
+            editWidth: enter.editShow? Math.trunc((window.innerWidth - ((enter.fullscreen?0:enter.left_side) + (!enter.fullscreen&&enter.showSidebar?enter.left:0))) / (enter.viewShow?2:1)) + 'px' : '0px',
+            viewWidth: enter.viewShow? Math.trunc((window.innerWidth - ((enter.fullscreen?0:enter.left_side) + (!enter.fullscreen&&enter.showSidebar?enter.left:0))) / (enter.editShow?2:1)) + 'px' : '0px',
+            canvasWidth: window.innerWidth - state.left_side
+        }
+    }
     switch (action.type) {
         case TYPE_MARKDOWN_SIZE:
             // console.log('winsize', window.innerWidth, state.left_side, state.left)
@@ -47,11 +55,13 @@ function markdownSize(
             })
         case TYPE_MARKDOWN_SHOW_TYPE:
             let rlt = {...state, ...action}
-            return {...rlt,
+            rlt =  {...rlt,
                 markdownHeight: (rlt.h - (rlt.fullscreen?0:rlt.top)) ,
                 editWidth: rlt.editShow? Math.trunc((window.innerWidth - ((rlt.fullscreen?0:rlt.left_side) + (!rlt.fullscreen&&rlt.showSidebar?rlt.left:0))) / (rlt.viewShow?2:1)) + 'px' : '0px',
                 viewWidth: rlt.viewShow? Math.trunc((window.innerWidth - ((rlt.fullscreen?0:rlt.left_side) + (!rlt.fullscreen&&rlt.showSidebar?rlt.left:0))) / (rlt.editShow?2:1)) + 'px' : '0px',
             }
+            console.log('rlt', rlt)
+            return rlt
         default:
             return state
     }

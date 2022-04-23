@@ -70,9 +70,9 @@ export default function FirstLayout() {
   }
   return (
     <div className={style.body}>
-      <TopBar />
+      {!fullscreen?<TopBar />:<span />}
       <div className={style.center}>
-        {!fullscreen?<SideBar />:''}
+        {!fullscreen?<SideBar />:<span />}
         {/* <NoteList></NoteList> */}
         {renderSide()}
         <div className={style.edit}>
