@@ -33,8 +33,10 @@ export default function GithubTopbar() {
             setnowNote(github.nowNote)
         })
         
-        myAxios.get('__index.html').then(response=>{
-            Store.dispatch(setGithubData(JSON.parse(response.data)))
+        myAxios.get('index.html').then(response=>{
+            // console.log(response.data)
+            // Store.dispatch(setGithubData(JSON.parse(response.data)))
+            Store.dispatch(setGithubData(response.data))
         })
 
         return () => {
