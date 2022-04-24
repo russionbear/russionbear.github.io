@@ -33,6 +33,7 @@ export default function GithubLayout() {
         <Route path='/value' element={<GithubValue />} />
         <Route path='/source' element={<GithubSource />} />
         <Route path='/error' element={<ErrorPage />} />
+        <Route path='/' element={<GithubBooks />} />
       </Routes>
     </div>
   </>);

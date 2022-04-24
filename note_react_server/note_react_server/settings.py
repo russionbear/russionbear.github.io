@@ -61,7 +61,7 @@ ROOT_URLCONF = 'note_react_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'static')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,13 +125,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_PATH = os.path.abspath(r'../books') + '/'
+STATIC_PATH = os.path.abspath(r'../books') + '/'  # 存放笔记
+STATIC_WEB_PATH = os.path.abspath(r'../static') + '/'  # 存放js，css,image
 STATICFILES_DIRS = (
     STATIC_PATH,
+    STATIC_WEB_PATH
 )
 
 
-print('static path:', STATIC_PATH)
+print('static path:', STATIC_PATH, STATICFILES_DIRS)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

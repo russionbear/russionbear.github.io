@@ -318,7 +318,7 @@ export default function NoteList() {
     }
     tags = Array.from(new Set(tags))
     let newChildren = tags.map(item => ({ key: 'tags_' + item, name: item, check: false, icon: <CheckOutlined /> }))
-    console.log(notesFilterDataRef)
+    // console.log(notesFilterDataRef)
     // @ts-ignore
     let newfilter = [...notesFilterData]
     let tmp_ = newfilter.find(item => item.key === 'tags')
@@ -345,7 +345,7 @@ export default function NoteList() {
   useEffect(() => {
     handleGetNoteValue(Store.getState().books.nowBook, nowNote)
     setRenderNowNote(nowNote)
-    console.log(Store.getState().books.nowBook, 'f7hg')
+    // console.log(Store.getState().books.nowBook, 'f7hg')
   }, [nowNote])
 
   // server : fetch
@@ -663,7 +663,7 @@ export default function NoteList() {
 
   // @ts-ignore
   const handleFilter = (e) => {
-    console.log(e)
+    // console.log(e)
     setNotesFilterData([...e])
   }
 

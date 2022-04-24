@@ -13,7 +13,7 @@ def make_index():
         books = tmp_setting['books']
 
     for i in books:
-        data[i['key']] = i
+        data[i['key']] = i.copy()
         children = {}
         with open(STATIC_PATH+'/'+i['key']+'/__setting.json', 'r', encoding='utf-8') as f:
             notes = json.load(f)['notes']
@@ -25,12 +25,14 @@ def make_index():
                 source[k['sourceId']] = k
             children[j['key']] = j
             children[j['key']]['children'] = source
-        data[i['key']] = i
         data[i['key']]['children'] = children
     # print(data)
 
     with open(STATIC_PATH+'/__setting.json', 'w', encoding='utf-8') as f:
         tmp_setting['index'] = data
+        # for i in tmp_setting['books']:
+        #     if 'children' in i:
+        #         del i['children']
         json.dump(tmp_setting, f)
     # for i in os.listdir()
 

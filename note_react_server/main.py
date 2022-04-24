@@ -16,8 +16,8 @@ def find_free_port():
 
 
 if __name__ == "__main__":
-    # used_port = find_free_port()
-    # sys.argv = ['manage.py', 'runserver', str(used_port)]
-    # webbrowser.open(f'http://127.0.0.1:{str(used_port)}/')
-    # main()
+    used_port = find_free_port()
+    sys.argv = ['manage.py', 'runserver', str(used_port)]
+    webbrowser.open(f'http://127.0.0.1:{str(used_port)}/#/edit')
+    main()
     pass

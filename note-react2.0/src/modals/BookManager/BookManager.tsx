@@ -145,8 +145,8 @@ export default function BookManager(
     const [selectedRowKeys, setselectedRowKeys] = useState<Array<string>>(props.defaultSelectedRowKeys||[])
 
     useEffect(() => {
-        
-        setDataSource(props.dataSource || [])
+        console.log(props.dataSource)
+        setDataSource(props.dataSource===undefined?[]:props.dataSource)
         // if(props.dataSource&&selectedRowKeys.length!==0){
         //     let newSelected = props.dataSource.find(item=>item.key===selectedRowKeys[0])
         //     if(!newSelected){
