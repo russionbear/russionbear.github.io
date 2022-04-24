@@ -1,35 +1,52 @@
 import { Result } from 'antd'
 import { SmileOutlined } from '@ant-design/icons';
 import Store from '../../redux/store';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import style from './GithubBooks.module.css';
+import { setGithubState } from '../../redux/actions';
+import { useNavigate } from 'react-router-dom';
 
 export default function GithubBooks() {
-  let tmp_ = Store.getState().github?.data
-  const [books, setbooks] = useState(tmp_===undefined?[]:Object.keys(tmp_))
-  const [loading, setloading] = useState(false)
-
-  const render = () => {
-    if(loading){
-      return <Result
-      icon={<SmileOutlined />}
-      title="Great, we have done all the operations!"
-    />
-    }
-    else if(books.length===0){
-      return <Result
-      icon={<SmileOutlined />}
-      title="Great, we have done all the operations!"
-    />
-    }else {
-      return <div>
-        jjjjj
-      </div>
-    }
-  }
   
+  const [books, setbooks] = useState(Object.values(Store.getState().github.data))
+  const nav_ = useNavigate()
+
+
+  useEffect(() => {
+    let sub1 = Store.subscribe(() => {
+      setbooks(Object.values(Store.getState().github.data))
+      // console.log('fsdf111', Store.getState().github.state)
+      if(Store.getState().github.state!=='books'){
+        nav_('/'+Store.getState().github.state)
+        // console.log('fsdf')
+      }
+    })
+
+    return () => {
+      sub1()
+    }
+  }, [])
+
+  const handleClidk = useCallback(
+    (e) => {
+      Store.dispatch(setGithubState('notes', e.target.dataset.key))
+    },
+    [],
+  )
+  
+
+
   return (
-    <div>
-      {render()}
+    <div className={style.body}>
+      {books.length === 0 ? <Result
+        icon={<SmileOutlined />}
+        title="Great, we have done all the operations!"
+      /> : books.map(item=>
+      <div className={style.item} key={item.key} onClick={handleClidk} data-key={item.key}>
+        <h4>{item.name}</h4>
+        <p>{item.dsc}</p>
+        </div>
+        )}
     </div>
   )
 }

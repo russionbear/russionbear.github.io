@@ -3,6 +3,7 @@ import {
   PartitionOutlined,
   BgColorsOutlined
 } from '@ant-design/icons';
+import Store from './store';
 // import Markdown from '../pages/Markdown/Markdown';
 
 
@@ -38,6 +39,8 @@ export const TYPE_NOTES_NOW_SWAP = "TYPE_NOTES_NOW_SWAP"
 
 export const TYPE_GH_STATE = "TYPE_GH_STATE"
 export const TYPE_GH_GETDATA = "TYPE_GH_GETDATA"
+// export const TYPE_GH_NOWBOOK = 'TYPE_GH_NOWBOOK'
+// export const TYPE_GH_NOWNOTE = 'TYPE_GH_NOWNOTE'
 
 /**
  * 初始值
@@ -132,36 +135,53 @@ export interface GithubBook extends ItemBook {
 
 
 // mid
-export interface GithubNote extends ItemBook {
+export interface GithubNote extends ItemNote {
   children: { [key: string]: ItemSource }
 }
 
 
 export const INIT_GITHUB: {
   type: string,
-  data: { [key: string]: GithubBook }
+  data: { [key: string]: GithubBook },
+  nowBook: string,
+  nowNote: string,
+  state: 'books' | 'notes' | 'value' | 'source'
 } = {
   type: '',
   data: {
     '1111': {
       key: '1111',
-      name: '1111',
-      dsc: '1111',
+      name: '1111sdfsdffffsdfsdfsdf',
+      dsc: '1111111sdfsdfffffffffsdfsdff1',
       children: {}
-    }, 
+    },
     '222': {
       key: '222',
       name: '222',
       dsc: '222',
       children: {}
-    }, 
+    },
     '333': {
       key: '333',
       name: '333',
       dsc: '333',
-      children: {}
-    }, 
-  }
+      children: {
+        '111': {
+          key: '111',
+          title: 'title',
+          createTime: 'sdfsdf',
+          modifyTime: 'sdf708sdf',
+          tags: ['11', '22', '33'],
+          image: '',
+          part: 'dsc',
+          children:{}
+        }
+      }
+    },
+  },
+  nowBook: '',
+  nowNote: '',
+  state: 'books'
 }
 
 /**
@@ -353,3 +373,35 @@ export function setNotesSwapNow(nowNote: string) {
 }
 
 
+export function setGithubState(state: typeof INIT_GITHUB.state, nowBook: string = '', nowNote: string = '') {
+  let rlt = {
+    ...Store.getState().github,
+    type: TYPE_GH_STATE,
+    state
+  }
+  switch (state) {
+    case 'notes':
+      rlt.nowBook = nowBook
+      break;
+    case 'value':
+      rlt.nowBook = nowBook
+      rlt.nowNote = nowNote
+      break
+    case 'source':
+      rlt.nowBook = nowBook
+      rlt.nowNote = nowNote
+      break
+
+    default:
+      break;
+  }
+  return rlt
+}
+
+export function setGithubData(data: typeof INIT_GITHUB.data) {
+  return {
+    ...Store.getState().github,
+    type: TYPE_GH_STATE,
+    data
+  }
+}

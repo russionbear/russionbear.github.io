@@ -22,7 +22,8 @@ import {
     TYPE_MARKDOWN_SHOW_TYPE,
     TYPE_EDIT_MODIFIED,
     INIT_GITHUB,
-    TYPE_GH_GETDATA
+    TYPE_GH_GETDATA,
+    TYPE_GH_STATE
 
 } from './actions'
 
@@ -158,13 +159,18 @@ function notes(
     }
 }
 
-function github(state = INIT_GITHUB, action: {[key: string]: any}){
+function github(state = INIT_GITHUB, action: {[key: string]: any}): typeof INIT_GITHUB{
     switch (action.type) {
         case TYPE_GH_GETDATA:
-            return {...state, ...action}
-    
+            return Object.assign({}, state, {
+                data: action.data
+            })
+        case TYPE_GH_STATE:
+            return Object.assign({}, state, {
+                ...action
+            })
         default:
-            break;
+            return state
     }
 }
 
