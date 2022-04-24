@@ -18,6 +18,8 @@ export default function GithubLayout() {
   useEffect(() => {
     // load source
     // console.log(nav_)
+    
+
     return () => {
 
     }

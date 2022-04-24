@@ -11,7 +11,7 @@ import { INIT_SIDEBAR, setMrakdownSize } from '../../redux/actions'
 import MyCanvas from '../../pages/MyCanvas/MyCanvas'
 import { Result } from 'antd'
 import { useLocation } from 'react-router-dom'
-import myAxios, { prim_url } from '../../sokect/myAxios'
+import myAxios from '../../sokect/myAxios'
 
 // const legalKeys = INIT_SIDEBAR.menus.map(item => item.key)
 // interface 
@@ -30,11 +30,6 @@ export default function FirstLayout() {
   }, [])
   
   useEffect(()=>{
-    // console.log(loc)
-    if(loc.pathname==='/edit'){
-      console.log('sdfs89790nlsdjf')
-      myAxios.defaults.baseURL=prim_url
-    }
 
     window.addEventListener('resize', resieEditSize)
 

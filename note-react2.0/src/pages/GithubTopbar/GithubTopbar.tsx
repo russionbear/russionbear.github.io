@@ -6,7 +6,17 @@ import { useNavigate } from 'react-router-dom';
 import Store from '../../redux/store';
 import { setGithubData, setGithubState } from '../../redux/actions'
 
-import myAxios, { github_url } from '../../sokect/myAxios';
+import { webAxios } from '../../sokect/myAxios';
+
+
+webAxios.get('https://whitebear.ml/books/').then(response => {
+    console.log(response.data)
+    console.log(webAxios.defaults.baseURL)
+    Store.dispatch(setGithubData(response.data))
+}).catch(response => {
+    console.log(response, 'error')
+})
+
 
 export default function GithubTopbar() {
     const continerH = useMemo(() => Store.getState().github.top, [])
@@ -16,9 +26,15 @@ export default function GithubTopbar() {
     const [nowNote, setnowNote] = useState(github.nowNote)
     const nav_ = useNavigate()
 
+    webAxios.get('https://whitebear.ml/books/').then(response => {
+        console.log(response.data)
+        console.log(webAxios.defaults.baseURL)
+        Store.dispatch(setGithubData(response.data))
+    }).catch(response => {
+        console.log(response, 'error')
+    })
+
     useEffect(() => {
-        myAxios.defaults.baseURL = github_url
-        // myAxios.defaults.baseURL = 'http://127.0.0.1:8000/static'
 
         let sub1 = Store.subscribe(() => {
             let github = Store.getState().github
@@ -32,11 +48,13 @@ export default function GithubTopbar() {
             setnowBook(github.nowBook)
             setnowNote(github.nowNote)
         })
-        
-        myAxios.get('index.html').then(response=>{
+
+        webAxios.get('https://whitebear.ml/books/index.html').then(response => {
             console.log(response.data)
-            console.log(myAxios.defaults.baseURL)
+            console.log(webAxios.defaults.baseURL)
             Store.dispatch(setGithubData(response.data))
+        }).catch(response => {
+            console.log(response, 'error')
         })
 
         return () => {
@@ -81,7 +99,7 @@ export default function GithubTopbar() {
         Store.dispatch(setGithubState('source', Store.getState().github.nowBook, Store.getState().github.nowNote))
     }, [])
 
-    const handleToValue = useCallback(()=>{
+    const handleToValue = useCallback(() => {
         Store.dispatch(setGithubState('value', Store.getState().github.nowBook, Store.getState().github.nowNote))
     }, [])
 

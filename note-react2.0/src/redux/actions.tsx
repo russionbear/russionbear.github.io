@@ -153,43 +153,43 @@ export const INIT_GITHUB: {
 } = {
   type: '',
   data: {
-    '1111': {
-      key: '1111',
-      name: '1111sdfsdffffsdfsdfsdf',
-      dsc: '1111111sdfsdfffffffffsdfsdff1',
-      children: {}
-    },
-    '222': {
-      key: '222',
-      name: '222',
-      dsc: '222',
-      children: {}
-    },
-    '11': {
-      key: '11',
-      name: '333',
-      dsc: '333',
-      children: {
-        '1650245798039': {
-          key: '1650245798039',
-          title: 'title',
-          createTime: '1650245798039',
-          modifyTime: '1650245798039',
-          tags: ['11', '22', '33'],
-          image: '',
-          part: 'dsc',
-          children:{
-            '111':{
-              sourceId: '111',
-              title: '111',
-              type: 'image',
-              size: 90,
-              url: 'ffff',
-              gitUrl:'giturl'
-          }}
-        }
-      }
-    },
+    // '1111': {
+    //   key: '1111',
+    //   name: '1111sdfsdffffsdfsdfsdf',
+    //   dsc: '1111111sdfsdfffffffffsdfsdff1',
+    //   children: {}
+    // },
+    // '222': {
+    //   key: '222',
+    //   name: '222',
+    //   dsc: '222',
+    //   children: {}
+    // },
+    // '11': {
+    //   key: '11',
+    //   name: '333',
+    //   dsc: '333',
+    //   children: {
+    //     '1650245798039': {
+    //       key: '1650245798039',
+    //       title: 'title',
+    //       createTime: '1650245798039',
+    //       modifyTime: '1650245798039',
+    //       tags: ['11', '22', '33'],
+    //       image: '',
+    //       part: 'dsc',
+    //       children:{
+    //         '111':{
+    //           sourceId: '111',
+    //           title: '111',
+    //           type: 'image',
+    //           size: 90,
+    //           url: 'ffff',
+    //           gitUrl:'giturl'
+    //       }}
+    //     }
+    //   }
+    // },
   },
   nowBook: '',
   nowNote: '',

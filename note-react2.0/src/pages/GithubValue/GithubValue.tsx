@@ -1,7 +1,7 @@
 import MDEditor from '@uiw/react-md-editor';
 import { Key, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import myAxios from '../../sokect/myAxios';
+import { webAxios } from '../../sokect/myAxios';
 import style from './GithubValue.module.css'
 import Store from '../../redux/store';
 import { setGithubState } from '../../redux/actions';
@@ -33,7 +33,7 @@ export default function GithubValue() {
         setquote(rlt.join('\n'))
 
         message.loading({content: 'loading...', key:MessageKey})
-        myAxios.get('/' + github.nowBook + '/' + github.nowNote).then(response => {
+        webAxios.get('/' + github.nowBook + '/' + github.nowNote).then(response => {
           // console.log(response)
           setvalue(response.data)
           message.success({content: '', key: MessageKey, duration:0.8})
