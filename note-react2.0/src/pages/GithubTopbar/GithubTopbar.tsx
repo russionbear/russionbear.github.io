@@ -1,138 +1,105 @@
 import style from './GithubTopbar.module.css'
-import { Breadcrumb, Button, Dropdown, Input, Select, Space, Menu } from 'antd'
+import { Breadcrumb, Button, Dropdown, Input, Select, Space, Menu, message, Tag } from 'antd'
 import { HomeOutlined, UserOutlined } from '@ant-design/icons';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Store from '../../redux/store';
 import { GithubBook, GithubNote, ItemSource, setGithubState } from '../../redux/actions'
 
+import myAxios, { github_url } from '../../sokect/myAxios';
 
 export default function GithubTopbar() {
+    const continerH = useMemo(() => Store.getState().github.top, [])
+    let github = Store.getState().github
     const [nowState, setnowState] = useState(Store.getState().github.state)
-    const [data, setdata] = useState(Store.getState().github?.data)
-    const [books, setbooks] = useState<GithubBook[]>([])
-    const [notes, setnotes] = useState<GithubNote[]>([])
-    const [sources, setsources] = useState<ItemSource[]>([])
-    // const nav_ = useNavigate()
+    const [nowBook, setnowBook] = useState(github.nowBook)
+    const [nowNote, setnowNote] = useState(github.nowNote)
+    const nav_ = useNavigate()
 
-    useEffect(()=>{
-        let sub1 = Store.subscribe(()=>{
+    useEffect(() => {
+        myAxios.defaults.baseURL = github_url
+
+        let sub1 = Store.subscribe(() => {
             let github = Store.getState().github
 
-            if(github?.state===undefined){
+            if (github.state === undefined) {
                 console.log('dangerous error !!!')
                 return
             }
-            setnowState(github?.state)
 
-            setdata(github?.data)
-            setbooks(github?.data===undefined?[]:Object.values(github.data))
-            if(github?.data===undefined){
-                setbooks([])
-                setnotes([])
-                setsources([])
-            }else{
-                setbooks(Object.values(github.data))
-                if(github.data[github.nowBook]===undefined){
-                    setnotes([])
-                    setsources([])
-                }else{
-                    setnotes(Object.values(github.data[github.nowBook].children))
-                    if(github.data[github.nowBook].children[github.nowNote]===undefined){
-                        setsources([])
-                    }else{
-                        setsources(Object.values(github.data[github.nowBook].children[github.nowNote].children))
-                    }
-                }
-            }
             setnowState(github.state)
-
+            setnowBook(github.nowBook)
+            setnowNote(github.nowNote)
         })
 
-        return ()=>{
+        return () => {
             sub1()
         }
     }, [])
 
 
-    useEffect(()=>{
-        let tmp = Store.getState().github
-        if(books.length===0){
-            if(tmp.state!=='books')
-            Store.dispatch(setGithubState('books'))
+    useEffect(() => {
+        let github = Store.getState().github
+        switch (nowState) {
+            case 'books':
+                nav_('/books')
+                break;
+            case 'notes':
+                nav_('/notes?b=' + github.nowBook)
+                break
+            case 'value':
+                nav_('/value?b=' + github.nowBook + '&n=' + github.nowNote)
+                break
+            case 'source':
+                nav_('/source?b=' + github.nowBook + '&n=' + github.nowNote)
+                break
+            default:
+                break;
         }
-        else if(notes.length===0){
-            if(tmp.state !== 'books'&&tmp.state !== 'notes')
-                Store.dispatch(setGithubState('notes'))
+
+        if (github.data === {}) {
+            // ---------------------------------
         }
-        // else if(sources.length===0){
-        //     if(Store.getState().github.state === 'books')
-        //         Store.dispatch(setGithubState('notes'))
-        // }
-    }, [books, notes])
+    }, [nowState])
 
-    const handleBookClick = useCallback((e) => {
-        // console.log(e, 'e')
-        // let github = Store.getState().github
-        Store.dispatch(setGithubState('notes', e))
-    },
-        [],
-    )
 
-    const handleNoteClick = useCallback(
-        (e) => {
-            let github = Store.getState().github
-            Store.dispatch(setGithubState(github.state, github.nowBook, e))
-        },
-        [],
-    )
+    const handleToBooks = useCallback(() => {
+        Store.dispatch(setGithubState('books'))
+    }, [])
+
+    const handleToNotes = useCallback(() => {
+        Store.dispatch(setGithubState('notes', Store.getState().github.nowBook))
+    }, [])
+    const handleToSource = useCallback(() => {
+        Store.dispatch(setGithubState('source', Store.getState().github.nowBook, Store.getState().github.nowNote))
+    }, [])
+
+    const handleToValue = useCallback(()=>{
+        Store.dispatch(setGithubState('value', Store.getState().github.nowBook, Store.getState().github.nowNote))
+    }, [])
+
+    console.log(nowState)
 
     return (
-        <div className={style.body}>
+        <div className={style.body} style={{ height: continerH + 'px' }}>
             <Breadcrumb>
                 <Breadcrumb.Item>
-                    <Link to='books'><HomeOutlined /></Link>
+                    <Button type='text' onClick={handleToBooks} icon={<HomeOutlined />}></Button>
                 </Breadcrumb.Item>
 
-                {nowState==="books"?'': <Breadcrumb.Item>
-                    <Select
-                        size="small"
-                        bordered={false}
-                        style={{ minWidth: '100px' }}
-                        showSearch
-                        placeholder="Select a person"
-                        showArrow={false}
-                        onChange={handleBookClick}
-                    >
-                        {books.map(item=><Select.Option key={item.key}>{item.name}</Select.Option>)}
-                    </Select>
-                </Breadcrumb.Item>}
+                {nowState !== 'books' ? <Breadcrumb.Item>
+                    <Button type='text' onClick={handleToNotes}>{github.data[nowBook].name}</Button>
+                </Breadcrumb.Item> : ''}
 
-                {/* {nowState==="notes"||nowState==="books"?'':<Breadcrumb.Item>
-                    <Link to='notes'><HomeOutlined /></Link>
-                </Breadcrumb.Item>} */}
+                {nowState !== 'books' && nowState !== 'notes' ? <Breadcrumb.Item>
+                    <Button type='text'>{github.data[nowBook].children[nowNote].title}</Button>
+                </Breadcrumb.Item> : ''}
 
-                {nowState==="notes"||nowState==="books"?'': <Breadcrumb.Item>
-                    <Select
-                        size="small"
-                        bordered={false}
-                        style={{ minWidth: '100px' }}
-                        showSearch
-                        placeholder="Select a person"
-                        showArrow={false}
-                        onChange={handleNoteClick}
-                    >
-                        {notes.map(item=><Select.Option key={item.key}>{item.title}</Select.Option>)}
-                    </Select>
-                </Breadcrumb.Item>}
             </Breadcrumb>
-            
+
             <Space>
-                {nowState==='value'?<Dropdown overlay={<Menu>
-                    {sources.map(item=><Menu.Item key={item.sourceId}>{item.title}</Menu.Item>)}
-                </Menu>}>
-                    <Link to="/source"><Button type='text'>source</Button></Link>
-                </Dropdown>:<span />}
+                {nowState === 'value' ? <Button type='text' onClick={handleToSource}>→<Tag>source list</Tag></Button> : ''}
+                {nowState === 'source' ? <Button type='text' onClick={handleToValue}>→<Tag>markdown</Tag></Button> : ''}
             </Space>
 
         </div>

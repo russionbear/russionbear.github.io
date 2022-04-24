@@ -1,6 +1,19 @@
 .container{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    /* align-items: flex-start;
+    justify-content: center; */
+    /* width: 80%; */
+    padding: 20px;
 }
+
+.markdown{
+    background-color: transparent;
+    word-break: break-all;
+    /* width: 80%; */
+}
+
+/* 
+.spin{
+    position: abl;
+} */

@@ -9,16 +9,17 @@
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
+
     width: 100%;
-    height: fit-content;
+    height: max-content;
 
     background-color: bisque;
 }
 
 .item{
-    width: 250px;
-    min-height: 200px;
-    background-color: aqua;
+    width: 200px;
+    min-height: 100px;
+    background-color: aquamarine;
     border-radius: 5px;
     padding: 5px;
     margin: 10px;
@@ -31,10 +32,10 @@
 
 .item:hover{
     animation: fade 0.8s;
-    background-color: aquamarine;
+    background-color: aqua;
 }
 
 @keyframes fade {
-    from{background-color: aqua;}
-    to{background-color: aquamarine;}
+    from{background-color: aquamarine;}
+    to{background-color: aqua;}
 }

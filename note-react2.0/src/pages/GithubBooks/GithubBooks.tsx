@@ -9,17 +9,10 @@ import { useNavigate } from 'react-router-dom';
 export default function GithubBooks() {
   
   const [books, setbooks] = useState(Object.values(Store.getState().github.data))
-  const nav_ = useNavigate()
-
 
   useEffect(() => {
     let sub1 = Store.subscribe(() => {
       setbooks(Object.values(Store.getState().github.data))
-      // console.log('fsdf111', Store.getState().github.state)
-      if(Store.getState().github.state!=='books'){
-        nav_('/'+Store.getState().github.state)
-        // console.log('fsdf')
-      }
     })
 
     return () => {

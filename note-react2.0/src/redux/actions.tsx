@@ -11,6 +11,9 @@ const _markdown_top = 0 // 32
 const _markdown_left_side = 45 // sidebar
 const _markdown_left = 400 // notelist
 const _markdown_toobar_heigth = 32
+
+const _github_top = 40
+
 /*
  * action 类型
  */
@@ -145,7 +148,8 @@ export const INIT_GITHUB: {
   data: { [key: string]: GithubBook },
   nowBook: string,
   nowNote: string,
-  state: 'books' | 'notes' | 'value' | 'source'
+  state: 'books' | 'notes' | 'value' | 'source',
+  top:number
 } = {
   type: '',
   data: {
@@ -161,27 +165,36 @@ export const INIT_GITHUB: {
       dsc: '222',
       children: {}
     },
-    '333': {
-      key: '333',
+    '11': {
+      key: '11',
       name: '333',
       dsc: '333',
       children: {
-        '111': {
-          key: '111',
+        '1650245798039': {
+          key: '1650245798039',
           title: 'title',
-          createTime: 'sdfsdf',
-          modifyTime: 'sdf708sdf',
+          createTime: '1650245798039',
+          modifyTime: '1650245798039',
           tags: ['11', '22', '33'],
           image: '',
           part: 'dsc',
-          children:{}
+          children:{
+            '111':{
+              sourceId: '111',
+              title: '111',
+              type: 'image',
+              size: 90,
+              url: 'ffff',
+              gitUrl:'giturl'
+          }}
         }
       }
     },
   },
   nowBook: '',
   nowNote: '',
-  state: 'books'
+  state: 'books',
+  top: _github_top
 }
 
 /**

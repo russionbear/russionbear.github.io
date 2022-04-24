@@ -4,29 +4,28 @@ import Store from '../../redux/store';
 import { useCallback, useEffect, useState } from 'react';
 import style from './GithubNotes.module.css';
 import { GithubNote, setGithubState } from '../../redux/actions';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function GithubBooks() {
   
   const [notes, setnotes] = useState<GithubNote[]>([])
-  const nav_ = useNavigate()
-
+  const loc = useLocation()
+  // console.log(loc)
 
   useEffect(() => {
     let sub1 = Store.subscribe(() => {
       let github = Store.getState().github
       if(github.data[github.nowBook]===undefined){
-        nav_('/books')
-        return
+        setnotes([])
+      }else{
+        setnotes(Object.values(github.data[github.nowBook].children))
       }
-      console.log(Object.values(github.data[github.nowBook].children))
-      setnotes(Object.values(github.data[github.nowBook].children))
       
-      if(Store.getState().github.state!=='notes'){
-        nav_('/'+Store.getState().github.state)
-        
-      }
     })
+
+    let name = loc.search.substring(3)
+    // console.log(name, 'name')
+    Store.dispatch(setGithubState('notes', name))
 
     return () => {
       sub1()

@@ -2,5 +2,28 @@
     display: flex;
     /* background-color: black;
     height: 100%; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: wheat;
+    overflow: auto;
+}
+
+
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgb(239, 239, 239);
+  border-radius: 2px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: #40a0ff49;
+  border-radius: 10px;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background: #33ff8f;
 }
 
