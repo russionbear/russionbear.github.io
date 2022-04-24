@@ -34,8 +34,8 @@ export default function GithubTopbar() {
         })
         
         myAxios.get('index.html').then(response=>{
-            // console.log(response.data)
-            // Store.dispatch(setGithubData(JSON.parse(response.data)))
+            console.log(response.data)
+            console.log(myAxios.defaults.baseURL)
             Store.dispatch(setGithubData(response.data))
         })
 
