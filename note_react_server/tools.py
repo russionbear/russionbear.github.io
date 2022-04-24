@@ -28,12 +28,12 @@ def make_index():
         data[i['key']]['children'] = children
     # print(data)
 
-    with open(STATIC_PATH+'/__setting.json', 'w', encoding='utf-8') as f:
-        tmp_setting['index'] = data
+    with open(STATIC_PATH+'/__index.html', 'w', encoding='utf-8') as f:
+        # tmp_setting['index'] = data
         # for i in tmp_setting['books']:
         #     if 'children' in i:
         #         del i['children']
-        json.dump(tmp_setting, f)
+        json.dump(data, f)
     # for i in os.listdir()
 
 

@@ -21,7 +21,7 @@ GIT_URL_ROOT = '/static/'
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2o_d2gj7xwvz#alc#95g%7&)c8w!@(timj)@dn^uqj^)@jg)fk'
+SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

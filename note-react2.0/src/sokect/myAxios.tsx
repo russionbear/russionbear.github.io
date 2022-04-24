@@ -10,10 +10,10 @@ export const github_url = 'https://whitebear.ml/books'
 // if(github_url!==undefined){
 //   myAxios.defaults.baseURL = github_url
 // }else{
-  myAxios.post('/books', {type:'get'}).catch((response)=>{
-    console.log(response)
-    myAxios.defaults.baseURL = 'http://127.0.0.1:8000/'
-  }).then()
+  // myAxios.post('/books', {type:'get'}).catch((response)=>{
+  //   console.log(response)
+  //   myAxios.defaults.baseURL = 'http://127.0.0.1:8000/'
+  // }).then()
 // }
 
 

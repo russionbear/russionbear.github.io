@@ -1,13 +1,11 @@
 import style from './NoteList.module.css'
-import { Menu, Button, Space, Select, Input, Dropdown, Layout, Modal, message, List } from 'antd'
+import { Button, Input, Dropdown } from 'antd'
 import {
-  RollbackOutlined,
   SettingOutlined,
-  PlusCircleOutlined,
   FilterOutlined,
   CheckOutlined
 } from '@ant-design/icons';
-import React, { useState, useRef, useCallback, createRef, useEffect, useMemo } from 'react'
+import { useState, useCallback, createRef, useEffect, useMemo } from 'react'
 import ListFilter, { ListFielterDataItem } from '../../component/ListFilter/ListFilter';
 // import TagSetter from '../../component/TagSetter/TagSetter';
 import BookManager from '../../modals/BookManager/BookManager';
@@ -17,8 +15,6 @@ import Store from '../../redux/store';
 // import axios from 'axios';
 import myAxios from '../../sokect/myAxios';
 import {
-  ItemBook as BookDataType,
-  ItemNote as NoteDataType,
   TYPE_BOOKMANAGER_BOOKS,
   TYPE_BOOKMANAGER_NOWBOOK,
   setBooksUpdate,
@@ -26,7 +22,6 @@ import {
   setEditValue,
   setNotesUpdate,
   ItemNote,
-  ItemSource,
   setEditSourceUpdate,
   setNotesSwapNow,
   setEditValueModified

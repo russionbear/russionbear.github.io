@@ -38,6 +38,9 @@ def init_localstorage():
     with open(STATIC_PATH + '__setting.json', 'w', encoding='utf-8') as f:
         json.dump({'books': []}, f)
 
+    with open(STATIC_PATH + '__index.html', 'w', encoding='utf-8') as f:
+        json.dump({}, f)
+
 
 init_localstorage()
 
@@ -78,6 +81,7 @@ def books(request):
         all_keys = set([i['key'] for i in newBooks])
         all_files = set(os.listdir(STATIC_PATH))
         all_files.remove('__setting.json')
+        all_files.remove('__index.html')
 
         for i in all_files - all_keys:
             shutil.rmtree(STATIC_PATH+i)

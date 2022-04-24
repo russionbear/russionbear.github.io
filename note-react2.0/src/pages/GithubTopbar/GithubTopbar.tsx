@@ -1,10 +1,10 @@
 import style from './GithubTopbar.module.css'
-import { Breadcrumb, Button, Dropdown, Input, Select, Space, Menu, message, Tag } from 'antd'
-import { HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { Breadcrumb, Button, Space, Tag } from 'antd'
+import { HomeOutlined } from '@ant-design/icons';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Store from '../../redux/store';
-import { GithubBook, GithubNote, ItemSource, setGithubState } from '../../redux/actions'
+import { setGithubData, setGithubState } from '../../redux/actions'
 
 import myAxios, { github_url } from '../../sokect/myAxios';
 
@@ -30,6 +30,10 @@ export default function GithubTopbar() {
             setnowState(github.state)
             setnowBook(github.nowBook)
             setnowNote(github.nowNote)
+        })
+        
+        myAxios.get('__index.html').then(response=>{
+            Store.dispatch(setGithubData(JSON.parse(response.data)))
         })
 
         return () => {
