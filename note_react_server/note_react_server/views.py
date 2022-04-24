@@ -131,7 +131,7 @@ def notes(request):
             os.mkdir(STATIC_PATH + bookKey + '/' + i)
             with open(STATIC_PATH + bookKey + '/' + i + '/__source.json', 'w', encoding='utf-8') as f:
                 json.dump({'sources': []}, f)
-            with open(STATIC_PATH + bookKey + '/' + i + '/__markdown.html', 'w', encoding='utf-8') as f:
+            with open(STATIC_PATH + bookKey + '/' + i + '/index.html', 'w', encoding='utf-8') as f:
                 f.write('')
             # with open(STATIC_PATH + bookKey + '/' + i + '/__quote.j')
 
@@ -153,13 +153,13 @@ def value(request):
     if bookKey is None or noteKey is None or type_ is None:
         return error
     if type_ == 'get':
-        with open(STATIC_PATH+bookKey+'/'+noteKey+'/__markdown.html', 'r', encoding='utf-8') as f:
+        with open(STATIC_PATH+bookKey+'/'+noteKey+'/index.html', 'r', encoding='utf-8') as f:
             return JsonResponse({'status': 0, 'value': f.read()})
     elif type_ == 'set':
         tmp_val = request.POST.get('value', None)
         if tmp_val is None:
             return
-        with open(STATIC_PATH+bookKey+'/'+noteKey+'/__markdown.html', 'w', encoding='utf-8') as f:
+        with open(STATIC_PATH+bookKey+'/'+noteKey+'/index.html', 'w', encoding='utf-8') as f:
             f.write(tmp_val)
 
         tmp_source = request.POST.get('source', None)

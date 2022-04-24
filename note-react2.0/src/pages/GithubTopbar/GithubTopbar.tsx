@@ -18,6 +18,7 @@ export default function GithubTopbar() {
 
     useEffect(() => {
         myAxios.defaults.baseURL = github_url
+        // myAxios.defaults.baseURL = 'http://127.0.0.1:8000/static'
 
         let sub1 = Store.subscribe(() => {
             let github = Store.getState().github

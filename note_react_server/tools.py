@@ -28,7 +28,7 @@ def make_index():
         data[i['key']]['children'] = children
     # print(data)
 
-    with open(STATIC_PATH+'/__index.html', 'w', encoding='utf-8') as f:
+    with open(STATIC_PATH+'/index.html', 'w', encoding='utf-8') as f:
         # tmp_setting['index'] = data
         # for i in tmp_setting['books']:
         #     if 'children' in i:
