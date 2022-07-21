@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCBuy"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="0" y="0" source="battle_ui_border_png" alpha="0.6"/>
+	<e:Scroller left="30" right="30" bottom="30" top="30">
+		<e:Group id="container">
+			<e:layout>
+				<e:VerticalLayout gap="10"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+    
+</e:Skin>

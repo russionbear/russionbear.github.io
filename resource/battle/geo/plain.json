@@ -1,0 +1,30 @@
+{
+    "mc": {
+        "-": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "plain_",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "plain_": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

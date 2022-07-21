@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCSetting"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="1000" height="650" x="0" y="0" source="battle_ui_border_png"/>
+	<e:Scroller left="30" top="30" right="30" bottom="30">
+		<e:Group>
+			<e:Group width="100%" height="100" x="0" y="183">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" gap="30"/>
+				</e:layout>
+				<e:Button id="musicSwitchButton" label="播放/暂停" x="175" y="39"/>
+				<e:Button id="upMusicButton" label="上一首" x="548" y="50"/>
+				<e:Button id="downMusicButton" label="下一首" x="327" y="39"/>
+				<e:Label id="musicNameLabel" x="588" y="50" height="30" width="300"/>
+			</e:Group>
+			<e:Group width="100%" height="100" x="88.925" y="193">
+				<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+				<e:Label text="背景音乐" x="150" y="36"/>
+				<e:HSlider id="bgMusicSilder" width="300" height="20" x="98" y="36" value="100"/>
+				<e:Label text="音效" x="552" y="56"/>
+				<e:HSlider id="soundSlider" width="300" height="20" x="580" y="53" value="100"/>
+			</e:Group>
+			<e:Group width="100%" height="100" x="98.925" y="203">
+				<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+				<e:Label text="故事配音" x="409.99999999999994" y="109.99999999999994" scaleX="1" scaleY="1"/>
+				<e:HSlider id="storyVolSlider" width="300" height="20" x="320" y="149.99999999999994" value="100" scaleX="1" scaleY="1"/>
+				<e:Label text="语音" x="439.99999999999994" y="109.99999999999994" scaleX="1" scaleY="1"/>
+				<e:HSlider id="chatVolSlider" width="300" height="20" x="320" y="109.99999999999994" scaleX="1" scaleY="1" value="100"/>
+			</e:Group>
+			<e:Group width="100%" height="100" x="108.925" y="213">
+				<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="100"/>
+				</e:layout>
+				<e:Button id="saveRecentButton" label="save recent" x="185" y="28"/>
+				<e:Button id="saveNewButton" label="save new" x="665" y="26"/>
+				<e:Button id="exitButton" label="exit" x="733" y="25"/>
+			</e:Group>
+			<e:Group width="100%" height="100" x="118.925" y="223">
+				<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+			</e:Group>
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" gap="10"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

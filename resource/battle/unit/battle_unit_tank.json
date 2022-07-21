@@ -1,0 +1,166 @@
+{
+    "mc": {
+        "red": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                },
+                {
+                    "name": "gray",
+                    "frame": 2,
+                    "end": 2
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "red_stand",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "res": "red_gray",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "blue": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                },
+                {
+                    "name": "gray",
+                    "frame": 2,
+                    "end": 2
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "blue_stand",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "res": "blue_gray",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "yellow": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                },
+                {
+                    "name": "gray",
+                    "frame": 2,
+                    "end": 2
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "yellow_stand",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "res": "yellow_gray",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "green": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                },
+                {
+                    "name": "gray",
+                    "frame": 2,
+                    "end": 2
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "green_stand",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "res": "green_gray",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "red_stand": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "red_gray": {
+            "y": 0,
+            "x": 100,
+            "w": 100,
+            "h": 100
+        },
+        "blue_stand": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "blue_gray": {
+            "y": 100,
+            "x": 100,
+            "w": 100,
+            "h": 100
+        },
+        "yellow_stand": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "yellow_gray": {
+            "y": 200,
+            "x": 100,
+            "w": 100,
+            "h": 100
+        },
+        "green_stand": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "green_gray": {
+            "y": 300,
+            "x": 100,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

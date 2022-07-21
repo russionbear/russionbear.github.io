@@ -1,0 +1,390 @@
+{
+    "mc": {
+        "-": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "across": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_across",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_bottom-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_bottom-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_bottom",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "center": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_center",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-bottom": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_no-bottom",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_no-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_no-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-top": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_no-top",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_top-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_top-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_top",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "vertical": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sea_vertical",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "sea_": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_across": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_bottom-left": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_bottom-right": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_bottom": {
+            "y": 400,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_center": {
+            "y": 500,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_left": {
+            "y": 600,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_no-bottom": {
+            "y": 700,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_no-left": {
+            "y": 800,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_no-right": {
+            "y": 900,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_no-top": {
+            "y": 1000,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_right": {
+            "y": 1100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_top-left": {
+            "y": 1200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_top-right": {
+            "y": 1300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_top": {
+            "y": 1400,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sea_vertical": {
+            "y": 1500,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BattleUnitInfo"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" x="0" y="0" height="100%" source="battle_ui_border_png" fillMode="scale" alpha="0.6"/>
+	<e:Scroller left="30" right="30" top="30" bottom="30">
+		<e:Group id="container">
+			<e:layout>
+				<e:VerticalLayout gap="10"/>
+			</e:layout>
+			<e:Label id="textArea" x="424" y="237" width="940"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCChatMessages"
+	 width="400"
+	height="500" xmlns:e="http://ns.egret.com/eui">
+	<e:Group width="100%" height="100%" y="0" touchThrough="true" touchChildren="false">
+		<e:Label id="label" x="0" y="0" width="400" size="25" scaleX="1" scaleY="1" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

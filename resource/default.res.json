@@ -1,0 +1,677 @@
+{
+	"groups": [
+		{
+			"keys": "battle_data_base,battle_data_skills,battle_data_weather,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,battle_ui_switch_png,battle_ui_info_png,battle_ui_return_png,battle_ui_down_png,battle_ui_up_png,battle_ui_nav_png,battle_ui_background_png,battle_ui_chat_png,battle_ui_data_png,battle_ui_end_png,battle_ui_guidebook_png,battle_ui_scale_png,battle_ui_set_png,battle_ui_destory_png,battle_ui_border_png,battle_unit_transportship_png,battle_unit_transport_png,battle_unit_thaad_png,battle_unit_tank_png,battle_unit_submarine_png,battle_unit_scout_png,battle_unit_motorcycle_png,battle_unit_missileship_png,battle_unit_launchV_png,battle_unit_howitzer_png,battle_unit_helicopter_png,battle_unit_gunnery_png,battle_unit_footmen_png,battle_unit_fighter_png,battle_unit_elite_json,battle_unit_destroyer_png,battle_unit_CV_png,battle_unit_conveyor_png,battle_unit_chariot_png,battle_unit_bigtank_png,battle_unit_B2_json,battle_unit_aew_json,battle_unit_bigtank_json,battle_unit_battleship_png,battle_unit_battleship_json,battle_unit_B2_png,battle_unit_aagun_png,battle_unit_aew_png,battle_unit_aagun_json,battle_unit_chariot_json,battle_unit_conveyor_json,battle_unit_CV_json,battle_unit_destroyer_json,battle_unit_elite_png,battle_unit_fighter_json,battle_unit_footmen_json,battle_unit_gunnery_json,battle_unit_helicopter_json,battle_unit_howitzer_json,battle_unit_launchV_json,battle_unit_missileship_json,battle_unit_motorcycle_json,battle_unit_scout_json,battle_unit_submarine_json,battle_unit_tank_json,battle_unit_thaad_json,battle_unit_transport_json,battle_unit_transportship_json,battle_build_stronghold_png,battle_build_stronghold_json,battle_build_shipyard_png,battle_build_shipyard_json,battle_build_factory_png,battle_build_factory_json,battle_build_city_png,battle_build_city_json,battle_build_airport_png,battle_build_airport_json,battle_state_unit_json,battle_state_number_json,battle_geo_sea_png,battle_geo_sea_json,battle_geo_rocks_png,battle_geo_rocks_json,battle_geo_road_png,battle_geo_road_json,battle_geo_plain_png,battle_geo_plain_json,battle_geo_mountain_png,battle_geo_mountain_json,battle_geo_lake_png,battle_geo_lake_json,battle_geo_forest_png,battle_geo_forest_json,battle_geo_bridge_png,battle_geo_bridge_json,battle_geo_beach_png,battle_geo_beach_json,battle_build_capital_json,battle_build_capital_png,battle_move_turbine_wav,battle_move_track_wav,battle_move_tire_wav,battle_move_submarine_wav,battle_move_propeller_wav,battle_move_jet_wav,battle_move_foot_wav,battle_btn_wav,battle_fight_bao_wav",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "battle/static_data/base.json",
+			"type": "json",
+			"name": "battle_data_base"
+		},
+		{
+			"url": "battle/static_data/skills.json",
+			"type": "json",
+			"name": "battle_data_skills"
+		},
+		{
+			"url": "battle/static_data/weather.json",
+			"type": "json",
+			"name": "battle_data_weather"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "battle/ui_skins/switch.png",
+			"type": "image",
+			"name": "battle_ui_switch_png"
+		},
+		{
+			"url": "battle/ui_skins/info.png",
+			"type": "image",
+			"name": "battle_ui_info_png"
+		},
+		{
+			"url": "battle/ui_skins/return.png",
+			"type": "image",
+			"name": "battle_ui_return_png"
+		},
+		{
+			"url": "battle/ui_skins/down.png",
+			"type": "image",
+			"name": "battle_ui_down_png"
+		},
+		{
+			"url": "battle/ui_skins/up.png",
+			"type": "image",
+			"name": "battle_ui_up_png"
+		},
+		{
+			"url": "battle/ui_skins/nav.png",
+			"type": "image",
+			"name": "battle_ui_nav_png"
+		},
+		{
+			"url": "battle/ui_skins/background.png",
+			"type": "image",
+			"name": "battle_ui_background_png"
+		},
+		{
+			"url": "battle/ui_skins/chat.png",
+			"type": "image",
+			"name": "battle_ui_chat_png"
+		},
+		{
+			"url": "battle/ui_skins/data.png",
+			"type": "image",
+			"name": "battle_ui_data_png"
+		},
+		{
+			"url": "battle/ui_skins/end.png",
+			"type": "image",
+			"name": "battle_ui_end_png"
+		},
+		{
+			"url": "battle/ui_skins/guidebook.png",
+			"type": "image",
+			"name": "battle_ui_guidebook_png"
+		},
+		{
+			"url": "battle/ui_skins/scale.png",
+			"type": "image",
+			"name": "battle_ui_scale_png"
+		},
+		{
+			"url": "battle/ui_skins/set.png",
+			"type": "image",
+			"name": "battle_ui_set_png"
+		},
+		{
+			"url": "battle/ui_skins/destory.png",
+			"type": "image",
+			"name": "battle_ui_destory_png"
+		},
+		{
+			"url": "battle/ui_skins/border.png",
+			"type": "image",
+			"name": "battle_ui_border_png"
+		},
+		{
+			"url": "battle/build/stronghold.png",
+			"type": "image",
+			"name": "battle_build_stronghold_png"
+		},
+		{
+			"url": "battle/build/stronghold.json",
+			"type": "json",
+			"name": "battle_build_stronghold_json"
+		},
+		{
+			"url": "battle/build/shipyard.png",
+			"type": "image",
+			"name": "battle_build_shipyard_png"
+		},
+		{
+			"url": "battle/build/airport.png",
+			"type": "image",
+			"name": "battle_build_airport_png"
+		},
+		{
+			"url": "battle/build/city.png",
+			"type": "image",
+			"name": "battle_build_city_png"
+		},
+		{
+			"url": "battle/build/factory.png",
+			"type": "image",
+			"name": "battle_build_factory_png"
+		},
+		{
+			"url": "battle/build/airport.json",
+			"type": "json",
+			"name": "battle_build_airport_json"
+		},
+		{
+			"url": "battle/build/city.json",
+			"type": "json",
+			"name": "battle_build_city_json"
+		},
+		{
+			"url": "battle/build/factory.json",
+			"type": "json",
+			"name": "battle_build_factory_json"
+		},
+		{
+			"url": "battle/build/shipyard.json",
+			"type": "json",
+			"name": "battle_build_shipyard_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_gunnery.png",
+			"type": "image",
+			"name": "battle_unit_gunnery_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_helicopter.png",
+			"type": "image",
+			"name": "battle_unit_helicopter_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_howitzer.png",
+			"type": "image",
+			"name": "battle_unit_howitzer_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_launchV.png",
+			"type": "image",
+			"name": "battle_unit_launchV_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_missileship.png",
+			"type": "image",
+			"name": "battle_unit_missileship_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_motorcycle.png",
+			"type": "image",
+			"name": "battle_unit_motorcycle_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_scout.png",
+			"type": "image",
+			"name": "battle_unit_scout_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_submarine.png",
+			"type": "image",
+			"name": "battle_unit_submarine_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_tank.png",
+			"type": "image",
+			"name": "battle_unit_tank_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_thaad.png",
+			"type": "image",
+			"name": "battle_unit_thaad_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_transport.png",
+			"type": "image",
+			"name": "battle_unit_transport_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_transportship.png",
+			"type": "image",
+			"name": "battle_unit_transportship_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_aagun.png",
+			"type": "image",
+			"name": "battle_unit_aagun_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_aew.png",
+			"type": "image",
+			"name": "battle_unit_aew_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_B2.png",
+			"type": "image",
+			"name": "battle_unit_B2_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_battleship.png",
+			"type": "image",
+			"name": "battle_unit_battleship_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_bigtank.png",
+			"type": "image",
+			"name": "battle_unit_bigtank_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_chariot.png",
+			"type": "image",
+			"name": "battle_unit_chariot_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_conveyor.png",
+			"type": "image",
+			"name": "battle_unit_conveyor_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_CV.png",
+			"type": "image",
+			"name": "battle_unit_CV_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_destroyer.png",
+			"type": "image",
+			"name": "battle_unit_destroyer_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_elite.png",
+			"type": "image",
+			"name": "battle_unit_elite_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_fighter.png",
+			"type": "image",
+			"name": "battle_unit_fighter_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_footmen.png",
+			"type": "image",
+			"name": "battle_unit_footmen_png"
+		},
+		{
+			"url": "battle/unit/battle_unit_missileship.json",
+			"type": "json",
+			"name": "battle_unit_missileship_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_howitzer.json",
+			"type": "json",
+			"name": "battle_unit_howitzer_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_helicopter.json",
+			"type": "json",
+			"name": "battle_unit_helicopter_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_gunnery.json",
+			"type": "json",
+			"name": "battle_unit_gunnery_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_launchV.json",
+			"type": "json",
+			"name": "battle_unit_launchV_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_scout.json",
+			"type": "json",
+			"name": "battle_unit_scout_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_motorcycle.json",
+			"type": "json",
+			"name": "battle_unit_motorcycle_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_submarine.json",
+			"type": "json",
+			"name": "battle_unit_submarine_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_tank.json",
+			"type": "json",
+			"name": "battle_unit_tank_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_thaad.json",
+			"type": "json",
+			"name": "battle_unit_thaad_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_transport.json",
+			"type": "json",
+			"name": "battle_unit_transport_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_transportship.json",
+			"type": "json",
+			"name": "battle_unit_transportship_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_aagun.json",
+			"type": "json",
+			"name": "battle_unit_aagun_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_aew.json",
+			"type": "json",
+			"name": "battle_unit_aew_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_battleship.json",
+			"type": "json",
+			"name": "battle_unit_battleship_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_bigtank.json",
+			"type": "json",
+			"name": "battle_unit_bigtank_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_chariot.json",
+			"type": "json",
+			"name": "battle_unit_chariot_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_B2.json",
+			"type": "json",
+			"name": "battle_unit_B2_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_CV.json",
+			"type": "json",
+			"name": "battle_unit_CV_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_conveyor.json",
+			"type": "json",
+			"name": "battle_unit_conveyor_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_destroyer.json",
+			"type": "json",
+			"name": "battle_unit_destroyer_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_elite.json",
+			"type": "json",
+			"name": "battle_unit_elite_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_footmen.json",
+			"type": "json",
+			"name": "battle_unit_footmen_json"
+		},
+		{
+			"url": "battle/unit/battle_unit_fighter.json",
+			"type": "json",
+			"name": "battle_unit_fighter_json"
+		},
+		{
+			"url": "battle/others/battle_state_number.json",
+			"type": "sheet",
+			"name": "battle_state_number_json",
+			"subkeys": "1,2,3,4,5,6,7,8,9"
+		},
+		{
+			"url": "battle/others/battle_state_unit.json",
+			"type": "sheet",
+			"name": "battle_state_unit_json",
+			"subkeys": "bullet,diving,loading,occupy,oil,stealth,supplies"
+		},
+		{
+			"url": "battle/geo/sea.png",
+			"type": "image",
+			"name": "battle_geo_sea_png"
+		},
+		{
+			"url": "battle/geo/beach.png",
+			"type": "image",
+			"name": "battle_geo_beach_png"
+		},
+		{
+			"url": "battle/geo/bridge.png",
+			"type": "image",
+			"name": "battle_geo_bridge_png"
+		},
+		{
+			"url": "battle/geo/forest.png",
+			"type": "image",
+			"name": "battle_geo_forest_png"
+		},
+		{
+			"url": "battle/geo/lake.png",
+			"type": "image",
+			"name": "battle_geo_lake_png"
+		},
+		{
+			"url": "battle/geo/mountain.png",
+			"type": "image",
+			"name": "battle_geo_mountain_png"
+		},
+		{
+			"url": "battle/geo/plain.png",
+			"type": "image",
+			"name": "battle_geo_plain_png"
+		},
+		{
+			"url": "battle/geo/road.png",
+			"type": "image",
+			"name": "battle_geo_road_png"
+		},
+		{
+			"url": "battle/geo/rocks.png",
+			"type": "image",
+			"name": "battle_geo_rocks_png"
+		},
+		{
+			"url": "battle/geo/beach.json",
+			"type": "json",
+			"name": "battle_geo_beach_json"
+		},
+		{
+			"url": "battle/geo/bridge.json",
+			"type": "json",
+			"name": "battle_geo_bridge_json"
+		},
+		{
+			"url": "battle/geo/lake.json",
+			"type": "json",
+			"name": "battle_geo_lake_json"
+		},
+		{
+			"url": "battle/geo/forest.json",
+			"type": "json",
+			"name": "battle_geo_forest_json"
+		},
+		{
+			"url": "battle/geo/mountain.json",
+			"type": "json",
+			"name": "battle_geo_mountain_json"
+		},
+		{
+			"url": "battle/geo/plain.json",
+			"type": "json",
+			"name": "battle_geo_plain_json"
+		},
+		{
+			"url": "battle/geo/rocks.json",
+			"type": "json",
+			"name": "battle_geo_rocks_json"
+		},
+		{
+			"url": "battle/geo/sea.json",
+			"type": "json",
+			"name": "battle_geo_sea_json"
+		},
+		{
+			"url": "battle/geo/road.json",
+			"type": "json",
+			"name": "battle_geo_road_json"
+		},
+		{
+			"url": "battle/build/capital.png",
+			"type": "image",
+			"name": "battle_build_capital_png"
+		},
+		{
+			"url": "battle/build/capital.json",
+			"type": "json",
+			"name": "battle_build_capital_json"
+		},
+		{
+			"url": "battle/sound/bao.wav",
+			"type": "sound",
+			"name": "battle_fight_bao_wav"
+		},
+		{
+			"url": "battle/sound/btn.wav",
+			"type": "sound",
+			"name": "battle_btn_wav"
+		},
+		{
+			"url": "battle/sound/move_foot.wav",
+			"type": "sound",
+			"name": "battle_move_foot_wav"
+		},
+		{
+			"url": "battle/sound/move_jet.wav",
+			"type": "sound",
+			"name": "battle_move_jet_wav"
+		},
+		{
+			"url": "battle/sound/move_propeller.wav",
+			"type": "sound",
+			"name": "battle_move_propeller_wav"
+		},
+		{
+			"url": "battle/sound/move_submarine.wav",
+			"type": "sound",
+			"name": "battle_move_submarine_wav"
+		},
+		{
+			"url": "battle/sound/move_tire.wav",
+			"type": "sound",
+			"name": "battle_move_tire_wav"
+		},
+		{
+			"url": "battle/sound/move_track.wav",
+			"type": "sound",
+			"name": "battle_move_track_wav"
+		},
+		{
+			"url": "battle/sound/move_turbine.wav",
+			"type": "sound",
+			"name": "battle_move_turbine_wav"
+		}
+	]
+}

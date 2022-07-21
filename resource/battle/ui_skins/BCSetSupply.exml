@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCSetSupply"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+		<e:Image width="100%" x="0" y="0" height="100%" source="battle_ui_border_png" fillMode="scale" alpha="0.6"/>
+	<e:Scroller left="30" right="30" top="30" height="490">
+		<e:Group id="container">
+			<e:layout>
+				<e:VerticalLayout gap="10"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Label text="可用金额：" bottom="30" left="160"/>
+	<e:Label id="allMoneyLabel" bottom="30" left="310" x="170" y="600"/>
+	<e:Button id="sureButton" label="确定" left="30" bottom="30"/>
+	<e:Label text="我的预算：" bottom="30" left="550"/>
+	<e:Label id="forecastMoney" bottom="30" left="700" x="560" y="600"/>
+	<e:Button id="autoDealButton" label="自动分配" right="30" bottom="30"/>
+</e:Skin>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GuiCompaignBattles"
+	 width="1600"
+	height="750" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" source="battle_ui_border_png" fillMode="repeat"/>
+	<e:Scroller left="30" right="300" top="30" bottom="30">
+		<e:Group id="container">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="middle" gap="30"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Button id="returnButton" label="back" right="50" bottom="50"/>
+</e:Skin>

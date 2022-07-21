@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCSetSupplyItem"
+	 width="600"
+	height="100" xmlns:e="http://ns.egret.com/eui">
+	<e:Group width="100%" height="100%" x="0">
+		<e:Image id="unitImage" width="70" height="70" x="98" y="100" source="battle_ui_nav_png"/>
+		<e:Label text="$" x="37" y="145"/>
+		<e:Label text="100" x="47" y="155" id="priceLabel"/>
+		<e:Label id="nameLabel" text="name" x="27" y="135"/>
+		<e:Button id="sureButton" label="选择" x="415" y="23"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="10" paddingLeft="10" horizontalAlign="contentJustify"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

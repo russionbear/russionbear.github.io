@@ -1,0 +1,198 @@
+{
+    "mc": {
+        "bottom-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_bottom-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_bottom-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_bottom",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_top-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_top-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "sand_top",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "sand_bottom-left": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_bottom-right": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_bottom": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_left": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_right": {
+            "y": 400,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_top-left": {
+            "y": 500,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_top-right": {
+            "y": 600,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "sand_top": {
+            "y": 700,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

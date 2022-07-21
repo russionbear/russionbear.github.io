@@ -1,0 +1,102 @@
+{
+    "mc": {
+        "red": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "red_stand",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "blue": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "blue_stand",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "yellow": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "yellow_stand",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "green": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "green_stand",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "red_stand": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "blue_stand": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "yellow_stand": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "green_stand": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

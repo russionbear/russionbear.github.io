@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.EditPanel"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="182008c4ffd"/>
+	<e:Image width="100%" height="100%" x="0" y="0" source="battle_ui_border_png" alpha="0.6"/>
+	<e:Group right="30" left="30" top="30" bottom="30">
+		<e:Scroller width="150" height="100%" x="0" y="0">
+			<e:Group id="menuContainer">
+				<e:layout>
+					<e:VerticalLayout gap="10"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Scroller width="790" x="150" bottom="100" height="490">
+			<e:Group id="valueContainer" x="0" y="0">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Button id="saveButton" label="save" x="778" y="519"/>
+		<e:Button id="stateButton" x="204" y="514"/>
+	</e:Group>
+</e:Skin>

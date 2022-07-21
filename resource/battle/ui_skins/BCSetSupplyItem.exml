@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCSetSupplyItem"
+	 width="600"
+	height="100" xmlns:e="http://ns.egret.com/eui">
+	<e:Group width="100%" height="100%" x="0">
+		<e:Image id="unitImage" width="70" height="70" x="98" y="100" source="battle_ui_nav_png"/>
+		<e:Label text="$" x="37" y="145"/>
+		<e:Label text="100" x="47" y="155" id="priceLabel"/>
+		<e:Label id="nameLabel" text="name" x="27" y="135"/>
+		<e:Label x="47" y="155" text="预算："/>
+		<e:EditableText id="inputLabel" width="160" height="30" x="376" y="44" backgroundColor="0xFFFFFF00" maxChars="10" prompt="0" textColor="0x000000" restrict="0-9" touchEnabled="true"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="10" paddingLeft="10" horizontalAlign="contentJustify"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

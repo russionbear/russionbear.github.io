@@ -1,0 +1,198 @@
+{
+    "mc": {
+        "-": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "across": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_across",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_bottom-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_bottom-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "center": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_center",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_top-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_top-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "vertical": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "river_vertical",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "river_": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_across": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_bottom-left": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_bottom-right": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_center": {
+            "y": 400,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_top-left": {
+            "y": 500,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_top-right": {
+            "y": 600,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "river_vertical": {
+            "y": 700,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.BCChat"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="0" y="0" source="battle_ui_border_png"/>
+	<e:Scroller right="200" left="30" top="30" bottom="200">
+		<e:Group>
+			<e:Label id="textArea" x="0" y="0" width="100%"/>
+		</e:Group>
+	</e:Scroller>
+	<e:ToggleSwitch id="forbiddenButton" label="ToggleButton" right="30" top="30" visible="true"/>
+	<e:Label text="禁用" right="115" top="30" visible="true"/>
+	<e:Button id="chooseTypeButton" x="41" y="539"/>
+	<e:Button id="chooseUserButton" x="162" y="539"/>
+	<e:EditableText id="inputButton" width="482.63" height="30" x="285.02" y="549.202" prompt="输入：" promptColor="0x000000" visible="false"/>
+	<e:Button id="sendButton" label="send" x="815" y="536"/>
+	<e:Button id="messageButton" x="304.694" y="536.238" width="434.163" visible="false"/>
+</e:Skin>

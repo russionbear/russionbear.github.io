@@ -1,0 +1,54 @@
+{
+    "mc": {
+        "across": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "bridge_across",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "vertical": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "bridge_vertical",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "bridge_across": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "bridge_vertical": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

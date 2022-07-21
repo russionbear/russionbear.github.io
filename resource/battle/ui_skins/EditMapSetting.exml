@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.MvMapSetting"
+	 width="1000"
+	height="650" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="0" y="0" source="battle_ui_border_png" alpha="0.6"/>
+	<e:Group left="30" right="30" top="30" bottom="30">
+		<e:Group width="100%" height="80" x="123.72" y="117" visible="false">
+			<e:Label id="labelRoomName" text="1234" x="443" y="42"/>
+			<e:Label text="room owner" x="647" y="24"/>
+			<e:Label id="labelRoomOwner" text="Label" x="639" y="38"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="50"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="63.72" y="57">
+			<e:Label x="47" y="86" touchEnabled="false" text="money"/>
+			<e:Label id="labelMoney" x="57" y="96" touchEnabled="false"/>
+			<e:Button id="buttonUpMoney" label="+" x="534" y="83" width="55.828"/>
+			<e:Button id="buttonDownMoney" label="-" x="561" y="78" width="50.128"/>
+			<e:Label x="57" y="96" touchEnabled="false" text="city"/>
+			<e:Label id="labelCity" x="67" y="106" touchEnabled="false"/>
+			<e:Button id="buttonUpCity" label="+" x="544" y="93" width="48.703"/>
+			<e:Button id="buttonDownCity" label="-" x="571" y="88" width="47.278"/>
+			<e:layout>
+				<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="50"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="73.72" y="67">
+			<e:Label x="47" y="86" touchEnabled="false" text="bout"/>
+			<e:Label id="labelBout" x="57" y="96" touchEnabled="false"/>
+			<e:Button id="buttonUpBout" label="+" x="534" y="83" width="55.828"/>
+			<e:Button id="buttonDownBout" label="-" x="561" y="78" width="50.128"/>
+			<e:Label x="57" y="96" touchEnabled="false" text="city" visible="false"/>
+			<e:Label id="labelCity0" x="67" y="106" touchEnabled="false" visible="false"/>
+			<e:Button id="buttonUpCity0" label="+" x="544" y="93" width="48.703" visible="false"/>
+			<e:Button id="buttonDownCity0" label="-" x="571" y="88" width="47.278" visible="false"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="50"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="83.72" y="77">
+			<e:Button id="buttonFog" label="fog open" x="608" y="22"/>
+			<e:Button id="buttonWeather" label="sunny" x="752" y="25"/>
+			<e:Button id="buttonAI" label="ai lvl：" x="826" y="45"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="50"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="93.72" y="87">
+			<e:Label text="user1" x="21" y="33"/>
+			<e:Button label="google" x="608" y="22" id="buttonHeroRed" visible="false"/>
+			<e:Button label="computer" x="752" y="25" id="buttonComputerRed"/>
+			<e:Label text="user2" x="31" y="43"/>
+			<e:Button label="google" x="618" y="32" id="buttonHeroBlue" visible="false"/>
+			<e:Button label="computer" x="762" y="35" id="buttonComputerBlue"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="30"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="103.72" y="97">
+			<e:Label text="user3" x="31" y="43"/>
+			<e:Button label="google" x="608" y="22" id="buttonHeroGreen" visible="false"/>
+			<e:Button label="computer" x="752" y="25" id="buttonComputerGreen"/>
+			<e:Label text="user4" x="41" y="53"/>
+			<e:Button label="google" x="618" y="32" id="buttonHeroYellow" visible="false"/>
+			<e:Button label="computer" x="762" y="35" id="buttonComputerYellow"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="30"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="80" x="113.72" y="107" visible="true">
+			<e:Button id="buttonClose" label="exit" x="199" y="28" visible="false"/>
+			<e:Button id="saveButton" label="save" x="620" y="14"/>
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="50"/>
+			</e:layout>
+		</e:Group>
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="center"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

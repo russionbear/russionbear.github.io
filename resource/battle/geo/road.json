@@ -1,0 +1,270 @@
+{
+    "mc": {
+        "across": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_across",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_bottom-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "bottom-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_bottom-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "center": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_center",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-bottom": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_no-bottom",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_no-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_no-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "no-top": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_no-top",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-left": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_top-left",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "top-right": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_top-right",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        "vertical": {
+            "frameRate": 30,
+            "labels": [
+                {
+                    "name": "stand",
+                    "frame": 1,
+                    "end": 1
+                }
+            ],
+            "events": [],
+            "frames": [
+                {
+                    "res": "road_vertical",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    "res": {
+        "road_across": {
+            "y": 0,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_bottom-left": {
+            "y": 100,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_bottom-right": {
+            "y": 200,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_center": {
+            "y": 300,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_no-bottom": {
+            "y": 400,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_no-left": {
+            "y": 500,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_no-right": {
+            "y": 600,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_no-top": {
+            "y": 700,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_top-left": {
+            "y": 800,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_top-right": {
+            "y": 900,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        },
+        "road_vertical": {
+            "y": 1000,
+            "x": 0,
+            "w": 100,
+            "h": 100
+        }
+    }
+}

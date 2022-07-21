@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GuiCompaignMenu"
+	 width="1600"
+	height="750" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1" source="battle_ui_border_png" fillMode="repeat"/>
+	<e:Scroller left="30" right="800" top="30" bottom="30">
+		<e:Group id="mapListGroup">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="30"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Button id="returnButton" label="back" visible="true" bottom="30" right="30"/>
+	<e:Scroller width="400" height="200" bottom="30" left="830">
+		<e:Group>
+			<e:Label id="labelMapDsc" x="36.686" y="17.055" width="100%"/>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller width="400" height="400" x="830" y="30">
+		<e:Group id="container0">
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center"/>
+		</e:layout>
+			<e:Group id="containerMiniMap" width="0" height="0" x="-504.0000000000001" y="147" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Button id="beginButton" label="begin" bottom="120" right="30"/>
+	<e:Scroller width="220" right="30" bottom="230" top="30">
+		<e:Group id="tagsGroup" width="220" visible="true" x="0" height="490" y="0">
+			<e:layout>
+			<e:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="30"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>
