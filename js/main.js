@@ -7235,19 +7235,19 @@ if (!window.platform) {
 __webpack_require__.r(__webpack_exports__);
 let pro = {
     baseUrl: "",
-    postUrl: "http://russionbear.com:3201/advw/restapi/",
-    wsUrl: "ws://russionbear.com:3201/advw/ws/",
+    postUrl: "http://175.178.246.91.com:3201/advw/restapi/",
+    wsUrl: "ws://175.178.246.91.com:3201/advw/ws/",
     egretUrl: "https://whitebear.ml/advw/egret/",
     recordUrl: "https://whitebear.ml/advw/#/record/",
     staticUrls: {
-        record: "http://russionbear.com:3201/static/advw/record/",
-        map: "http://russionbear.com:3201/static/advw/map/",
-        userHeader: "http://russionbear.com:3201/static/advw/userHeader/",
-        mapImage: "http://russionbear.com:3201/static/advw/mapImg/",
-        userSetting: "http://russionbear.com:3201/static/advw/index/user_setting.json",
-        postUrlSetting: "http://russionbear.com:3201/static/advw/index/url_setting.json",
-        indexMd: "http://russionbear.com:3201/static/advw/index/index.md",
-        helpMd: "http://russionbear.com:3201/static/advw/index/help.md"
+        record: "http://175.178.246.91.com:3201/static/advw/record/",
+        map: "http://175.178.246.91.com:3201/static/advw/map/",
+        userHeader: "http://175.178.246.91.com:3201/static/advw/userHeader/",
+        mapImage: "http://175.178.246.91.com:3201/static/advw/mapImg/",
+        userSetting: "http://175.178.246.91.com:3201/static/advw/index/user_setting.json",
+        postUrlSetting: "http://175.178.246.91.com:3201/static/advw/index/url_setting.json",
+        indexMd: "http://175.178.246.91.com:3201/static/advw/index/index.md",
+        helpMd: "http://175.178.246.91.com:3201/static/advw/index/help.md"
     }
 };
 window["pro"] = pro;
