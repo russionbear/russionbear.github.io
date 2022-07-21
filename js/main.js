@@ -7237,8 +7237,8 @@ let pro = {
     baseUrl: "",
     postUrl: "http://175.178.246.91.com:3201/advw/restapi/",
     wsUrl: "ws://175.178.246.91.com:3201/advw/ws/",
-    egretUrl: "https://whitebear.ml/advw/egret/",
-    recordUrl: "https://whitebear.ml/advw/#/record/",
+    egretUrl: "http://whitebear.ml/advw/egret/",
+    recordUrl: "http://whitebear.ml/advw/#/record/",
     staticUrls: {
         record: "http://175.178.246.91.com:3201/static/advw/record/",
         map: "http://175.178.246.91.com:3201/static/advw/map/",
