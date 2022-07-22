@@ -6373,6 +6373,7 @@ class Director_Editor extends Director {
         urlreq.url = config["default"].staticUrls.map + mapId;
         urlreq.requestHeaders.push(new egret.URLRequestHeader("Content-Type", "application/x-www-form-urlencoded"));
         this.urlloader.once(egret.Event.COMPLETE, this.onGetMapValueComplete, this);
+        this.urlloader.once(egret.IOErrorEvent.IO_ERROR, this.onGetMapValueComplete, this);
         this.urlloader.load(urlreq);
     }
     onGetMapValueComplete(event) {
