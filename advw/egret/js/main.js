@@ -6379,6 +6379,11 @@ class Director_Editor extends Director {
     onGetMapValueComplete(event) {
         var loader = event.target;
         let data;
+        // try {
+        //     data = JSON.parse(loader.data)
+        // } catch (error) {
+        //     data = DataMaker.makeBattleMap(20, 20);
+        // }
         if (loader.data === null) {
             console.log('error map data', loader.data);
             data = MapData_DataMaker.makeBattleMap(20, 20);
