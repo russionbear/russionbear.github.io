@@ -1,9 +1,0 @@
-.body{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    /* display: ; */
-}
