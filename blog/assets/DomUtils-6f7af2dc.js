@@ -1,0 +1,1 @@
+const o=()=>new Promise((n,i)=>{const e=document.createElement("input");e.type="file",e.onchange=()=>{e.files?n(e.files):i()},e.click()}),t=(n,i=!1)=>{i?window.open(n):window.location.href=n},s=()=>window.innerHeight>window.innerWidth;export{o as c,s as i,t as o};
